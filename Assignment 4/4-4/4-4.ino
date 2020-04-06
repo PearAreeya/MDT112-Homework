@@ -1,14 +1,25 @@
-String examPassChack(int yourScore, int fullScore);
+String examPassChack(int yourScore, int fullScore) {
 
-void setup() {
-  Serial.begin(9600);
-  Serial.println("-----------------------------------");
-}
+  String result;
 
-void loop() {
-  int fullScore = random(0, 10) * 10;
+  if (yourScore>=(fullScore/2)){
 
-  Serial.println(examPassChack(random(0, fullScore), fullScore));
-  Serial.println("-----------------------------------");
-  delay(2000);
+      result=" Your are " + String (yourScore) + " form "+
+
+      String (fullScore) +" point in last exam.\nPass exam Congratulations.";
+
+  }
+
+  if (yourScore<=(fullScore/2)){
+
+      result=" Your are " + String (yourScore)+ " form "+
+
+      String (fullScore) +" poin in last exam.\nFail exam Attempt agin.";
+
+  }
+
+
+
+  return result;
+
 }
