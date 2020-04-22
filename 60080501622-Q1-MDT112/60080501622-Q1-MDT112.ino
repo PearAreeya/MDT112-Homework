@@ -51,7 +51,7 @@ void loop(){
             t = t / 2;
             Serial.println("Faster X2 (Current Speed : X" + String(i) + ")");
             tone(8,400,100);
-            delay(700);
+            delay(500);
         }
     }
 
@@ -74,7 +74,7 @@ void loop(){
             Serial.println("Faster X2 (Current Speed : X" + String(i) + ")");
             tone(8,400,100);
             t = t / 2;
-            delay(700);
+            delay(500);
         }
     }
 }
